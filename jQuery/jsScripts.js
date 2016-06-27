@@ -27,7 +27,7 @@ function show_skills(skills){
 
 $(document).ready(function(){
 	//Software skills toggle function
-	var skills = [false,false,false,false,false,false];
+	var skills = [false,false,false,false,false,false,false,false,false];
 	$("#Software > img").click(function(){
 		var num = $("#Software > img").index(this);
 		var i;
@@ -42,6 +42,27 @@ $(document).ready(function(){
 		}
 		show_skills(skills);
 	});
-
 });
+
+$(document).ready(function(){
+	$("#Software > img").hover(
+		function(){$(this).addClass('expand');}
+		, function(){$(this).removeClass('expand');}
+	);
+});
+
+// $(document).ready(function(){
+// 	//Portfolio animations
+// 	console.log($(".portfolio > button"))
+// 	$(".portfolio").find("button").mouseover(function(){
+// 		$(this).parent().addClass('hover');
+// 	});
+
+// 	$(".portfolio").find("button").mouseout(function(){
+// 		$(this).parent().removeClass('hover');
+// 	});
+
+// });
+
+
 
