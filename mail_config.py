@@ -6,8 +6,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import copy as cp
 
-gmail_usr 	= "@gmail.com"
-gmail_pass 	= ""
+gmail_usr 	= "autoSenderFlask@gmail.com"
+gmail_pass 	= "autoSendMyMail005"
 
 class email_driver():
 	"""	Creates a class module to handle all Emailing """
