@@ -1,0 +1,12 @@
+In index.html: 
+	Figure out a way to put hash values to route to specific places in portfolio.html
+	Animate the sliding up / down of skills description when user clicks on an icon
+	Update solidworks skills: Motion study simulations / Photoviewer
+
+In portfolio.html:
+	Figure out how to do stacking : /home/route_back to bring us back to home page for home tab
+
+In error.html:
+	Make the maintenance page look nicer with proper buttons to redirect to project page
+	Routes back to the relevant sections of the project page. If you were viewing Awards section, then you should be routed back there
+

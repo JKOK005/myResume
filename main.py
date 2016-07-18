@@ -8,7 +8,7 @@ import smtplib
 import os
 
 app 				= Flask(__name__)
-app.secret_key 		= "<Its a secret :) >"
+app.secret_key 		= "hello9!m5q^hyiv(rfc&-jf$8@h#*8mvuy#%!17*gff#g+l^rom&fvgyoyo"
 app.debug 			= True
 
 @app.route('/message-post', methods=['POST'])
@@ -42,19 +42,24 @@ def send_resume():
 		return redirect(url_for('home'))		# Sends the user back to the home finally
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index', methods=['GET', 'POST'])
+@app.route('/back_home')
 def home():
 	# Routes to the home page
 	return render_template('index.html')
 
 
-@app.route('/Portfolio', methods=['POST'])
-@app.route('/awards', methods=['POST'])
-@app.route('/education', methods=['POST'])
+@app.route('/portfolio', methods=['GET', 'POST'])
 def project_page():		
 	# Routes to the project page
-	IPython.embed()
-	return render_template('<template for project>')
+
+	return render_template('portfolio.html')
+
+@app.route('/portfolio/error', methods=['GET'])
+def error_page():
+	# Routes to a <page under maintenance> page
+
+	return render_template('error.html')
 
 if __name__ == "__main__":
 	app.run()

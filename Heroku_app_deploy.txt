@@ -1,0 +1,7 @@
+# Guide to deploying flask app on Heroku
+
+Open cmd
+
+Key: heroku login 
+
+Enter credentials

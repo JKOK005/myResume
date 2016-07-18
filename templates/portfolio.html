@@ -12,15 +12,15 @@
     <title>Portfolio - Johan</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css-portfolio/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css-portfolio/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css-portfolio/4-col-portfolio.css" rel="stylesheet">
-    <link href="css-portfolio/cssAddOns.css" rel="stylesheet">
-    <link rel="stylesheet" href="css-portfolio/icono.min.css">
+    <link href="../static/css-portfolio/4-col-portfolio.css" rel="stylesheet">
+    <link href="../static/css-portfolio/cssAddOns.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css-portfolio/icono.min.css">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js-portfolio/jQery-addOns.js"></script>
+    <script type="text/javascript" src="../static/js-portfolio/jQery-addOns.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,10 +47,14 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form id="route_to_home" action="/index" method="post">
                 <ul class="nav navbar-nav">
-                    <li id="Home">
+                    <li id="Home" onclick="route_to_home.submit()">
                         <a href="#">Home</a>
                     </li>
+                </ul>
+            </form>
+                <ul class="nav navbar-nav">
                     <li id = "Portfolio-link">
                         <a href="#">Portfolio</a>
                     </li>
@@ -84,30 +88,30 @@
         <!-- Projects Row -->
         <div class="row projects">
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/autoLab.JPG" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/autoLab.JPG" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">Auto Lab</h3>
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/BARC.jpg" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/BARC.jpg" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">BARC</h3>
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/gimbal.jpg" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/gimbal.jpg" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">2-axis gimbal</h3>      
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/HPV-main.jpg" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/HPV-main.jpg" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">Berkeley HPV</h3>
                 </a>
             </div>
@@ -117,23 +121,23 @@
         <!-- Projects Row -->
         <div class="row projects">
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/molecular-dynamics.png" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/molecular-dynamics.png" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">Molecular dynamics</h3>
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/gaussianProcess.png" alt="" id="gaussianProcess">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/gaussianProcess.png" alt="" id="gaussianProcess">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">Predictive traffic model</h3>
                 </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/FEM-main.png" alt="">
-                    <img class="img-responsive addPlus hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/FEM-main.png" alt="">
+                    <img class="img-responsive addPlus hide" src="../static/img/icon-plus.png" alt="">
                     <h3 class="hide">F.E.M simulation</h3>
                 </a>
             </div>
@@ -153,30 +157,30 @@
 
         <div class="row projects">
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/telesense-main.png" alt="" id="telesense-logo">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/telesense-main.png" alt="" id="telesense-logo">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div>
 
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/autoLab-main.jpg" alt="" id="ASE-logo">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/autoLab-main.jpg" alt="" id="ASE-logo">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div>
 
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/SMART-main.jpg" alt="" id="SMART-logo">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/SMART-main.jpg" alt="" id="SMART-logo">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div> 
 
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/DSO-main.jpg" alt="" id="DSO-logo">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/DSO-main.jpg" alt="" id="DSO-logo">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div>
         </div>               
@@ -195,16 +199,16 @@
 
         <div class="row projects">
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/astar-main.jpg" alt="">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/astar-main.jpg" alt="">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div>
 
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/SOFE-main.png" alt="">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/SOFE-main.png" alt="">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div> 
         </div>               
@@ -223,16 +227,16 @@
 
         <div class="row projects">
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/NTU-main.jpg" alt="">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/NTU-main.jpg" alt="">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div>
 
             <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive main-img" src="img/UCB-main.jpg" alt="">
-                    <img class="img-responsive addPlusMid hide" src="img/icon-plus.png" alt="">
+                <a href="portfolio/error">
+                    <img class="img-responsive main-img" src="../static/img/UCB-main.jpg" alt="">
+                    <img class="img-responsive addPlusMid hide" src="../static/img/icon-plus.png" alt="">
                 </a>
             </div> 
         </div>               
@@ -242,10 +246,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js-portfolio/jquery.js"></script>
+    <script src="../static/js-portfolio/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js-portfolio/bootstrap.min.js"></script>
+    <script src="../static/js-portfolio/bootstrap.min.js"></script>
 
 </body>
 
