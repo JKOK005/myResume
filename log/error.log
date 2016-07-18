@@ -1,0 +1,11 @@
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:20:41] "POST /message-post HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:20:43] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "POST /message-post HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:21:48] "GET /message-post?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2016 18:22:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Johan\\Desktop\\Renaissance engineering\\Important stuff\\My Resume HTML\\Resume back front end\\mail_config.py', reloading

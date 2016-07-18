@@ -8,23 +8,23 @@
 	<!--Custom fonts. To improve load times, remove this and update the h1 styling in style.css--> 
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
 	<!-- stylesheets -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="stylesheet" href="css/style_bloom.css" type="text/css" />
-	<link rel="stylesheet" href="css/hover.css" type="text/css" />
-	<link rel="stylesheet" href="css/component.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/style_bloom.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/hover.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/component.css" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/styleAddOns.css" type="text/css" />
+	<link rel="stylesheet" href="../static/css/styleAddOns.css" type="text/css" />
 	<!-- <link rel="stylesheet" href="css/social-plugins.css" type="text/css" /> -->
 
 
 	<!-- favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="../static/img/favicon.ico">
 
 	<!-- JS scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="jQuery/jsScripts.js"></script>
-	<script src="jQuery/hover_pack.js"></script>
-	<script type="text/javascript" src="jQuery/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="../static/jQuery/jsScripts.js"></script>
+	<script src="../static/jQuery/hover_pack.js"></script>
+	<script type="text/javascript" src="../static/jQuery/jquery.mixitup.min.js"></script>
 	<script type="text/javascript">
 	$(function () {
 		
@@ -73,7 +73,18 @@
 
 </head>
 <body>
-	
+
+	{% block body %}
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<script>
+					    window.alert("{{message}}");
+					</script>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	{% endblock %}
 	<!-- Header-->
 	<header>
 		<h1>Hello world <font color="red">@</font> Johan Kok Zhi Kang</h1>
@@ -107,11 +118,11 @@
 		<section class="gallery">
 			<h1 class="center">Software skills</h1>
 			<div class="row" id="Software">
-				<img src="img/python_logo_2.png" id="Python" alt="python" class="grid-3" style="width:20%">
-				<img src="img/ROS.png" id="ROS" alt="ros" class="grid-3" style="width:20%">
-				<img src="img/solidworks.png" id="Solidworks" alt="sw" class="grid-3" style="width:20%">
- 				<img src="img/matlab.jpg" id="Matlab" alt="matlab" class="grid-3" style="width:16%">
-				<img src="img/Ubuntu.png" id="Ubuntu" alt="ubuntu" class="grid-3" style="width:18%">
+				<img src="../static/img/python_logo_2.png" id="Python" alt="python" class="grid-3" style="width:20%">
+				<img src="../static/img/ROS.png" id="ROS" alt="ros" class="grid-3" style="width:20%">
+				<img src="../static/img/solidworks.png" id="Solidworks" alt="sw" class="grid-3" style="width:20%">
+ 				<img src="../static/img/matlab.jpg" id="Matlab" alt="matlab" class="grid-3" style="width:16%">
+				<img src="../static/img/Ubuntu.png" id="Ubuntu" alt="ubuntu" class="grid-3" style="width:18%">
 
 				<br>
 				<section class="center row">
@@ -152,10 +163,10 @@
 			</div>
 
 			<div class="row" id="Software">
-				<img src="img/Arduino.png"  id="Arduino" alt="arduino" class="grid-3" style="width:20%">
-				<img src="img/raspberryPi.png" id="Rpi" alt="Rpi" class="grid-3 shiftR" style="width:14%">
-				<img src="img/javascript.png" id="Javascript" alt="Javascript" class="grid-3" style="width:29%">
-				<img src="img/Java.png" id="Java" alt="Java" class="grid-3 shiftL" style="width:20%">
+				<img src="../static/img/Arduino.png"  id="Arduino" alt="arduino" class="grid-3" style="width:20%">
+				<img src="../static/img/raspberryPi.png" id="Rpi" alt="Rpi" class="grid-3 shiftR" style="width:14%">
+				<img src="../static/img/javascript.png" id="Javascript" alt="Javascript" class="grid-3" style="width:29%">
+				<img src="../static/img/Java.png" id="Java" alt="Java" class="grid-3 shiftL" style="width:20%">
 
 				<br>
 				<section class="center row">
@@ -198,12 +209,16 @@
 			<!-- Portfolio -->	
 			<h1 class="center"><font color="white">Find out more about me</h1>
 			<div class="row btn-selector">
-				<button type="submit" class="btn"><span class="hvr-sweep-to-right">Projects</span></button>
-				<button type="submit" class="btn"><span class="hvr-sweep-to-right">Awards</span></button>
-				<button type="submit" class="btn"><span class="hvr-sweep-to-right">Education</span></button>
+				<form action="/portfolio" method="post">
+					<button type="submit" class="btn"><span class="hvr-sweep-to-right">Projects</span></button>
+					<button type="submit" class="btn"><span class="hvr-sweep-to-right">Awards</span></button>
+					<button type="submit" class="btn"><span class="hvr-sweep-to-right">Education</span></button>
+				</form>
 			</div>
 			<div class="row">
-				<button class="button button-3 button-3a icon-download">Download my resume</button>
+				<form action="/resume-request" method="post">
+					<button class="button button-3 button-3a icon-download">Download my resume</button>
+				</form>
 			</div>
 		</div>
 	</section>
@@ -213,13 +228,13 @@
 			<h1 class="center">Connect with me</h1>
 			<div class="row">
 				<a href="https://www.facebook.com/johan.kok.351">
-					<img src="img/facebook.png" class="grid-3" alt="facebook" style="width:10%">
+					<img src="../static/img/facebook.png" class="grid-3" alt="facebook" style="width:10%">
 				</a>
 				<a href="https://www.linkedin.com/in/johan-zhi-kang-kok-582417104">
-					<img class="grid-3" alt="facebook" src="img/linkedin.png" style="width:10%">
+					<img class="grid-3" alt="facebook" src="../static/img/linkedin.png" style="width:10%">
 				</a>
 				<a href="https://github.com/JKOK005">
-					<img class="grid-3" alt="facebook" src="img/github.png" style="width:10%">
+					<img class="grid-3" alt="facebook" src="../static/img/github.png" style="width:10%">
 				</a>
 			</div>
 
@@ -239,26 +254,26 @@
                     <div class="col-md-6  col-sm-12" >
                         <h3>Write a message</h3>
                         <hr />
-                        <form>
+                        <form method="post" action="/message-post">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                        <input type="text" name="name" id="Name" class="form-control" required="required" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        <input type="text" name="email" id="Mail" class="form-control" required="required" placeholder="Email address">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="3"  placeholder="Message"></textarea>
+                                        <textarea name="message" id="Message" required="required" class="form-control" rows="3"  placeholder="Message"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class=" submitBtn">Submit</button>
+                                        <button type="submit" class=" submitBtn" >Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -270,6 +285,5 @@
              <!-- ./ Row Content-->
         </div>
     </section>
-
 </body>
 </html>
