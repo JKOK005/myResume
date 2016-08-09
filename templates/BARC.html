@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BARC project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link href="../static/portfolio-css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    <link href="../static/portfolio-css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/portfolio-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/portfolio-css/addOns.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    {% include "menubar.html" %}
+
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>The BARC project</h1>
+                        <h3>Berkeley Autonomous Race Car</h3>
+                        <hr class="intro-divider">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .intro-header {background: url(../static/portfolio-img/BARC.jpg) no-repeat center center;}
+        </style>
+        <!-- /.container -->
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+    <a  name="services"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Vehicle dynamics 131</h2>
+                    <p class="lead" align="justify">The <a href="http://www.barc-project.com/">BARC</a> project is a University of California, Berkeley initiative to further research in the area of vehicle dynamics and controls. It features a water-jet crafted vehicle steel frame, wheel suspension and protective bumpers which are really handy for frequent crashes. <br><br>The vehicle handles wifi communication by having its own router. The Odroid unit acts as the brain which distributes commands to the Arduino nano for low level vehicle maneuvers. To perform accurate state tracking, we mounted accelerometers and gyroscopes to gather data on accelerations and angular velocities.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="../static/portfolio-img/BARC_real.jpg" alt="" width="500">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    <!-- /.content-section-a -->
+    </div>
+
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Traction control in action</h2>
+                    <p class="lead" align="justify">Our group decided to implement traction control as part of our project on the BARC. Traction control involves controlling the slip-ratio experienced by the vehicle to derive maximum tire force. This is achieved by measuring the vehicle's actual velocity (by integrating the accelerometer reading) and measuring the true angular velocity of the wheels using encoders. <br><br> The user first defines an engine torque for the vehicle. If the current slip-ratio is smaller than the desired slip ratio, we maintain the engine torque, allowing the vehicle to accelerate. Traction control kicks in when the current slip ratio is larger than desired. The vehicle drops her speed to the desired slip-ratio using a PID loop.<br><br> My contribution was to develop the traction control algorithm and interfacing the vehicle with the ROS framework. ROS was used to coordinate message passing between the high level Odroid unit and the low level arduino controls. 
+                    </p>
+                    <a href="https://github.com/maxwellgerber/barc"><button class="btn btn-primary" type="button">Git source</button></a>  
+                    <form action="/BARC-report" method="post">
+                        <button class="btn btn-danger">Download report</button>
+                    </form> 
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <video loop muted autoplay width="450" height="300" controls>
+                        <source src="../static/video/Traction_control.mp4" type="video/mp4">
+                    </video>    
+                    <p align="justify"> Video of the BARC performing traction control on paved road </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+</html>
+
+<!-- /.content-section-a -->
+<!-- jQuery -->
+<script src="../static/portfolio-js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../static/portfolio-js/bootstrap.min.js"></script>

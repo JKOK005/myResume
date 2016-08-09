@@ -9,7 +9,7 @@ import os
 
 app 				= Flask(__name__)
 app.secret_key 		= "hello9!m5q^hyiv(rfc&-jf$8@h#*8mvuy#%!17*gff#g+l^rom&fvgyoyo"
-app.debug 			= True
+app.debug 			= False
 
 @app.route('/message-post', methods=['POST'])
 def parse_message():
@@ -28,11 +28,16 @@ def parse_message():
 	return redirect(url_for('home'))		# Sends the user back to the home finally
 
 
-@app.route('/resume-request', methods=['POST'])
-def send_resume():
+@app.route('/<file_request>', methods=['POST'])
+# @app.route('/resume-request', methods=['POST'])
+# @app.route('/BARC-route')
+def send_resume(file_request):
 	try:
 		resume_location 	= "Resume"		# File directory relative to root
-		resume_file 		= resume_location + "/Johankok_resume.pdf"
+		if file_request == "resume-request":
+			resume_file 		= resume_location + "/Johankok_resume.pdf"
+		elif file_request == "BARC-report":
+			resume_file 		= resume_location + "/barc-project.pdf"
 
 		with open(os.path.join(os.getcwd(), resume_file), 'rb') as resume:
 			return send_file(resume_file,  as_attachment=True)		# Note that resume_file is the path relative to root path of app
@@ -40,6 +45,7 @@ def send_resume():
 	except Exception:
 		flash("Error with retrieving resume. Sorry :(")
 		return redirect(url_for('home'))		# Sends the user back to the home finally
+
 
 @app.route('/')
 @app.route('/index', methods=['GET', 'POST'])
@@ -54,6 +60,22 @@ def project_page():
 	# Routes to the project page
 
 	return render_template('portfolio.html')
+
+
+@app.route('/portfolio/AutoLab', methods=['GET'])
+def show_autolab():
+	return render_template('Autolab.html')
+
+
+@app.route('/portfolio/lumiere', methods=['GET'])
+def show_lumiere():
+	return render_template('lumiere.html')
+
+
+@app.route('/portfolio/BARC', methods=['GET'])
+def show_BARC():
+	return render_template('BARC.html')
+
 
 @app.route('/portfolio/error', methods=['GET'])
 def error_page():

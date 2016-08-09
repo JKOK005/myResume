@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AutoLab - Johan Kok</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link href="../static/portfolio-css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    <link href="../static/portfolio-css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/portfolio-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/portfolio-css/addOns.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    {% include "menubar.html" %}
+
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+            <video loop muted autoplay poster="../static/portfolio-img/autoLab.jpg" class="fullscreen-bg__video">
+                <source src="../static/video/Auto-lab-promo.mp4" type="video/webm">
+            </video>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Welcome to the AutoLab</h1>
+                        <h3>Surgical Robotics / Grasping / Learning</h3>
+                        <hr class="intro-divider">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+    <a  name="services"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">One year of research in surgical robotics</h2>
+                    <p class="lead" align="justify">The future of surgery lies in the hands of robots. I am privileged to have worked along well reknowned roboticist <a>Ken Goldberg</a> and highly competent members in the AutoLab. <br><br> Throughout the year, I worked on projects involving low level controls of the da Vinci Research Kit (dVRK), OpenRAVE motion planning and Guided Policy Search</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="../static/portfolio-img/lab-pic.jpg" alt="Chania">
+                        </div>
+
+                        <div class="item test">
+                          <img src="../static/portfolio-img/summer-fuel.jpg" alt="Chania">
+                        </div>
+
+                        <div class="item test">
+                          <img src="../static/portfolio-img/Yumi.jpg" alt="Chania">
+                        </div>
+
+                        <div class="item">
+                          <img src="../static/portfolio-img/dVRK.jpg" alt="Flower">
+                        </div>
+
+                        <div class="item">
+                          <img src="../static/portfolio-img/grasp-clutter.png" alt="Flower">
+                        </div>  
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Guided Policy Search in MuJoCo</h2>
+                    <p class="lead" align="justify"><a href="https://graphics.stanford.edu/projects/gpspaper/gps_full.pdf">Guided Policy Search</a> is a technique used to filter out optmial policies that the robot uses in an environment where the dynamics is unknown. We model the dynamics as linear and pick a balance between generating guiding samples and policy comparison until we converge to a suitable policy. <br><br> My work involves quantifying the sensitivity of different GPS hyperparameters to the overall performance of the robot. Hyperparameter tuning of constants is important in order to ensure the best possible results for an experiment. <br><br> The image on the left shows an attempt by a PR2 model in MuJoCo to learn the dynamics of the environment as it fits a peg into the central hole.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="../static/portfolio-img/GPS-mujoco.png" alt="" width="500">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Motion planning with OpenRAVE</h2>
+                    <p class="lead" align="justify">Motion planning is key in the process of exploring the work cell. The objective here is to bring an arm end effector from its start to target position without obstacle or self collision. The arms was modelled akin to the dVRK with 3 degrees of freedom and simulation was done purely in the OpenRAVE engine. <br><br> Algorithms from the Open Motion Planning Library (OMPL) were used to initialize a collision-free trajectory. This trajectory was then optimized using <a href="https://people.eecs.berkeley.edu/~pabbeel/papers/2014-IJRR-trajopt.pdf">TrajOpt</a> and encapsulating user defined constraints such as joint distance and velocity penalties. <br><br> Thus, my contribution to the lab was to develop a high level motion planner to determine an optimal trajectory before performing autonomous controls on the physical dVRK.</p>
+                    <a href="https://github.com/BerkeleyAutomation/OpenRAVE-motion-planner.git"><button class="btn btn-primary" type="button">Git source</button></a>    
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <video loop muted autoplay width="450" height="250" controls>
+                        <source src="../static/video/Take_1.mp4" type="video/mp4">
+                    </video>    
+                    <p align="justify"> Motion planning with OMPL and TrajOpt. Achieved self-collision and obstacle avoidance. </p>
+                    <video loop muted autoplay width="450" height="250" controls>
+                        <source src="../static/video/Fail-1.mp4" type="video/mp4">
+                    </video>
+                    <p align="justify"> Motion planning with TrajOpt. Failed to detect self-collision. </p>    
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">SLERP interpolation for dVRK controls</h2>
+                    <p class="lead" align="justify">I designed a linear interpolator for the dVRK arms as my first project. The interpolator discretizes start and goal positions into multiple waypoints and applies quaternion SLERP interpolation using supporting a supporting <a href="https://bitbucket.org/benkehoe/tfx/overview">tfx</a> library. <br><br> Each intermediate waypoint is passed as a ROS tf message structure and broadcasted in the ROS network for the dVRK arm driver nodes to listen and execute movement. <br><br> Speed control was thereafter implemented by varying the time delay inbetween traversing waypoints, allowing the dVRK controls to be more robust.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <video loop muted autoplay width="450" height="300" controls>
+                        <source src="../static/video/interpolation.mp4" type="video/mp4">
+                    </video>    
+                    <p align="justify"> Quaternion SLERP interpolation of the dVRK arm in close-up view. </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-b -->
+</body>
+</html>
+
+<!-- /.content-section-a -->
+<!-- jQuery -->
+<script src="../static/portfolio-js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../static/portfolio-js/bootstrap.min.js"></script>
+

@@ -6,15 +6,15 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import copy as cp
 
-gmail_usr 	= "autoSenderFlask@gmail.com"
-gmail_pass 	= "autoSendMyMail005"
+gmail_usr 	= ""
+gmail_pass 	= ""
 
 class email_driver():
 	"""	Creates a class module to handle all Emailing """
 
 	def __init__(self):
-		fromaddr	= "autoSenderFlask@gmail.com"
-		toaddr 		= "JKOK005@e.ntu.edu.sg"
+		fromaddr	= ""
+		toaddr 		= ""
 		subject 	= "Some viewed your page! Woo Hoo"
 
 		msg 			= MIMEMultipart()
