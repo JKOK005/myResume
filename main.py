@@ -8,8 +8,8 @@ import smtplib
 import os
 
 app 				= Flask(__name__)
-app.secret_key 		= "hello9!m5q^hyiv(rfc&-jf$8@h#*8mvuy#%!17*gff#g+l^rom&fvgyoyo"
-app.debug 			= False
+app.secret_key 		= ""
+app.debug 			= True
 
 @app.route('/message-post', methods=['POST'])
 def parse_message():
