@@ -9,7 +9,7 @@ import os
 
 app 				= Flask(__name__)
 app.secret_key 		= ""
-app.debug 			= True
+app.debug 			= False
 
 @app.route('/message-post', methods=['POST'])
 def parse_message():
